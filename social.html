@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pardifowl</title>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v17.0&appId=259717250734200&autoLogAppEvents=1" nonce="a9a0UCoq"></script>
+<header>
+    <div id="headerImage" class="header-image">
+        <img src="images/pf-header-logo.png">
+    </div>
+    <div class="mode-toggle">
+        <input type="checkbox" id="darkModeToggle">
+        <label for="darkModeToggle">Dark Mode</label>
+    </div>
+    <div class="header-icons">
+        <a href="https://www.facebook.com/PardiFowl/"><img src="images/facebook-icon.png" alt="Icon 1"></a>
+        <a href="https://www.instagram.com/pardifowl/"><img src="images/ig-icon.png" alt="Icon 2"></a>
+        <a href="https://www.tiktok.com/@pardifowl"><img src="images/tiktok-icon.png" alt="Icon 3"></a>
+        <a href="https://twitter.com/PardiFowl"><img src="images/twitter-icon.png" alt="Icon 4"></a>
+    </div>
+    <button type="button" class="email-signup-button">Email Sign-up</button>
+</header>
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="seperator">|</li>
+        <li><a href="releases.html">Releases</a></li>
+        <li class="seperator">|</li>
+        <li><a href="social.html">Social Media</a></li>
+        <li class="seperator">|</li>
+        <li><a href="services.html">Services</a></li>
+       <!-- <li class="seperator">|</li>
+        <li><a href="merch.html">Merch</a></li> -->
+        <li class="seperator">|</li>
+        <li><a href="pardiology.html">Pardiology</a></li>
+    </ul>
+</nav>
+<main>
+    <div class="main-content">
+        <h1>Yo this is like a sample yo</h1>
+        <div class="fb-page" data-href="https://www.facebook.com/PardiFowl" data-tabs="timeline" data-width="500" data-height="" data-small-header="false" 
+        data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/PardiFowl" 
+        class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/PardiFowl">Pardi Fowl</a></blockquote></div>
+    </div>
+    <div class="email-signup">
+        <form id="email-list" action="register.php">
+            <input type="email" data-error-text="Please enter a valid email address" placeholder="Email Address" name="email">
+            <input type="submit" id="submit" value="Subscribe">
+        </form>
+    </div>
+</main>
+<footer>
+    <p>
+      Created by <a href="www.pixelprowebdevs.com">www.pixelprowebdevs.com</a>
+      | &copy; 2023
+    </p>
+</footer>
+<script>
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const body = document.body;
+
+    darkModeToggle.addEventListener('change', () => {
+      body.classList.toggle('dark-mode');
+    });
+
+    const headerImage = document.getElementById('headerImage');
+
+    /* const storedDarkMode = localStorage.getItem('darkMode'); */
+
+   /* if (storedDarkMode === 'true') {
+        darkModeToggle.checked = true;
+        body.classList.add('dark-mode');
+        headerImage.src = "images/pf-dark.png";
+    } */
+
+    darkModeToggle.addEventListener('change', () => {
+
+       /* body.classList.toggle('dark-mode'); */
+
+      if (darkModeToggle.checked) {
+        headerImage.src = "images/pf-header-logo.png";
+      } else {
+        headerImage.src = "images/pf-dark.png";
+      }
+    });
+</script>
+</body>
+</html>
